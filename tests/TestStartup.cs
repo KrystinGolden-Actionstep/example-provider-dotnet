@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using tests.Middleware;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using DotNetEnv;
 
 namespace tests;
 
@@ -12,6 +13,7 @@ public class TestStartup
     public TestStartup(IConfiguration configuration)
     {
         Configuration = configuration;
+        DotNetEnv.Env.Load("../../../../.env");
     }
 
     public IConfiguration Configuration { get; }
