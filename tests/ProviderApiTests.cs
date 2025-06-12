@@ -60,7 +60,7 @@ public class ProviderApiTests : IDisposable
         string pactUrl = Environment.GetEnvironmentVariable("PACT_URL");
         string pactFile = Environment.GetEnvironmentVariable("PACT_FILE");
         string version = Environment.GetEnvironmentVariable("GIT_COMMIT");
-        string branch = Environment.GetEnvironmentVariable("GIT_BRANCH");
+        string branch = Environment.GetEnvironmentVariable("GIT_BRANCH") ?? "master";
         string buildUri = $"{Environment.GetEnvironmentVariable("GITHUB_SERVER_URL")}/{Environment.GetEnvironmentVariable("GITHUB_REPOSITORY")}/actions/runs/{Environment.GetEnvironmentVariable("GITHUB_RUN_ID")}";
 
 

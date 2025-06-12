@@ -13,11 +13,18 @@ public class ProductsController : Controller
         _repository = ProductRepository.GetInstance();
     }
 
+    //[HttpGet]
+    //[Route("/products")]
+    //public IActionResult GetAll()
+    //{
+    //    return new JsonResult(_repository.GetProducts());
+    //}
+
     [HttpGet]
     [Route("/products")]
-    public IActionResult GetAll()
+    public string GetAll()
     {
-        return new JsonResult(_repository.GetProducts());
+        return "Test products";
     }
 
     [HttpGet]
