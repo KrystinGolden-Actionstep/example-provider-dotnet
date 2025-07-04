@@ -17,7 +17,7 @@ public class ProductsController : Controller
     [Route("/products")]
     public IActionResult GetAll()
     {
-        var test = "test3";
+        var test = "test4";
         return new JsonResult(_repository.GetProducts());
     }
 
